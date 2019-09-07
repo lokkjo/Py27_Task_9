@@ -9,7 +9,6 @@ class Open_with_time_count:
 
 	def __enter__(self):
 		print(f'Время запуска кода: {self.t_start}')
-		# print(self.t_start)
 		self.file = open(self.file_path)
 		return self.file
 
@@ -35,11 +34,3 @@ with Open_with_time_count('third_crusade.txt', 'rt') as f:
 				doc.write(f'{i_2}: {line}\n')
 	print(f'\nКрестовый поход упоминается {i_1} раз.')
 	print(f'Ричард упоминается {i_2} раз.\n')
-
-
-
-
-
-
-# t_start = datetime.datetime.now().microsecond
-# print(t)
